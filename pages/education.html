@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/src/style.css">
+    <title>Sajid's World</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">Sajid</a>
+
+        <nav id="navbar">
+            <a href="/index.html"> Home</a>
+            <a href="#" class="active">Education</a>
+            <a href="/pages/experience.html" >Experience</a>
+        </nav>
+        <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+    <section class="education">
+        <div class="education-content">
+            <h1 style="font-size: 3em;">My <span>Educational</span> Journey</h1>
+            <h3 style="font-size: 3em;" class="typing-text-edu">I'm a <span></span></h3>
+            <div class="education-content-c">
+                <span>
+                    <h3 style="font-size: 3em;">University</h3>
+                </span>
+                <p style="font-size: 2.3em;"><b>BSc. in Electrical and Computer Engineering</b></p>
+                <p style="font-size: 2.3em;">Rajshahi University of Engineering & Technology (RUET)</p>
+                <br>
+            </div>
+            <div class="education-content-c">
+                <span>
+                    <h3 style="font-size: 3em;">College</h3>
+                </span>
+                <p style="font-size: 2.3em;"><b>Higher Secondary Certificate (HSC)</b></p>
+                <p style="font-size: 2.3em;">BAF Shaheen College Dhaka</p>
+                <p style="font-size: 2.3em;">Group: Science</p>
+                <br>
+            </div>
+            <div class="education-content-c">
+                <span>
+                    <h3 style="font-size: 3em;">School</h3>
+                </span>
+                <p style="font-size: 2.3em;"><b>Secondary School Certificate (SSC)</b></p>
+                <p style="font-size: 2.3em;">Monipur Uchcha Vidyalaya and College, Dhaka</p>
+                <p style="font-size: 2.3em;">Group: Science</p>
+                <br>
+            </div>
+        </div>
+    </section>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navbar = document.querySelector('header nav, #navbar');
+        hamburger.onclick = function () {
+            navbar.classList.toggle('open');
+            hamburger.classList.toggle('open');
+            // Hide hamburger menu when clicked outside
+            document.addEventListener('click', function (event) {
+                if (!navbar.contains(event.target) && !hamburger.contains(event.target)) {
+                    navbar.classList.remove('open');
+                    hamburger.classList.remove('open');
+                }
+            });
+        };
+    </script>
+</body>
+
+</html>

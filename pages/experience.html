@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/src/style.css">
+    <title>Sajid's World</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">Sajid</a>
+
+        <nav id="navbar">
+            <a href="/index.html"> Home</a>
+            <a href="/pages/education.html">Education</a>
+            <a href="#" class="active">Experience</a>
+        </nav>
+        <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+    <section class="experience">
+        <div class="experience-content">
+            <h1 style="font-size: 3em;">My <span>Experiences</span></h1>
+            <h3 style="font-size: 3em;" class="typing-text-exp">I've marked my footprint at <span></span></h3>
+            <div class="experience-content-c">
+                <span>
+                    <h3 style="font-size: 3em;">Academic Experiences</h3>
+                </span>
+                <p style="font-size: 2.3em;"><b>European University of Bangladesh</b></p>
+                <p style="font-size: 2.3em;">Lecturer (Jan. 2025 - present)</p>
+                <p style="font-size: 2.3em; margin-bottom: 0;">
+                    <button class="dropdown-btn" onclick="toggleDropdown(event)">Courses Taught <i
+                            class="fa fa-caret-down"></i></button>
+                </p>
+                <div class="dropdown-content" style="display:none; margin-bottom: 1em;">
+                    <p style="font-size: 1.6em; margin-top: 0.5em;">
+                        I have taught courses such as Computer Fundamentals, Structured Programming Language, Object Oriented Programming, Data Structures, Algorithms,
+                        Software Engineering, Data Communication and Network Security. My
+                        teaching emphasizes hands-on learning and real-world applications.
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="experience-content-c">
+                <span>
+                    <h3 style="font-size: 3em;">Open Source Projects</h3>
+                </span>
+                <p style="font-size: 2.3em;">
+                    <b>
+                        <a href="https://aospb-project.github.io/" target="_blank"
+                            style="color: inherit; text-decoration: underline;">
+                            aosPB-project
+                        </a>
+                    </b>
+                </p>
+                <p style="font-size: 1.6em;">aosPB Project is an AOSP based custom rom for a variety of android devices.</p>
+                <br>
+                <p style="font-size: 2.3em;">
+                    <b>
+                        <a href="https://pixelos.net/" target="_blank" style="color: inherit; text-decoration: underline;">
+                            PixelOS-AOSP
+                        </a>
+                    </b>
+                </p>
+                <p style="font-size: 1.6em;">An AOSP based ROM aiming to provide the best of Pixel.</p>
+            </div> <br>
+            <div class="experience-content-c">
+                <span>
+                    <h3 style="font-size: 3em;">Personal Projects</h3>
+                </span>
+                <p style="font-size: 2.3em;">
+                    <b>
+                        <a href="https://github.com/sajidshahriar72543/kernel_build" target="_blank" style="color: inherit; text-decoration: underline;">
+                            Automated Kernel Builder
+                        </a>
+                    </b>
+                </p>
+                <p style="font-size: 1.6em;">A tool to automate the process of building and configuring Linux kernels.</p>
+                <p style="font-size: 1.6em;">Technologies used: GitHub Workflow, Yml, Markdown</p> <br>
+            
+            <div class="experience-content-c">
+                <p style="font-size: 2.3em;">
+                    <b>
+                        <a href="https://github.com/sajidshahriar72543/flutter_ci" target="_blank"
+                            style="color: inherit; text-decoration: underline;">
+                            Flutter CI
+                        </a>
+                    </b>
+                </p>
+                <p style="font-size: 1.6em;">Continuous integration service and automated release of any flutter project.</p>
+                <p style="font-size: 1.6em;">Technologies used: GitHub Workflow, Yml, Markdown</p> <br>
+            </div>
+            <div class="experience-content-c">
+                <p style="font-size: 2.3em;">
+                    <b>
+                        <a href="https://github.com/sajidshahriar72543/Uclone" target="_blank"
+                            style="color: inherit; text-decoration: underline;">
+                            Uclone
+                        </a>
+                    </b>
+                </p>
+                <p style="font-size: 1.6em;">UBER clone app powered by Flutter and Firebase.</p>
+                <p style="font-size: 1.6em;">Technologies used: Flutter, Dart, Yml, Markdown</p> <br>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navbar = document.querySelector('header nav, #navbar');
+        hamburger.onclick = function () {
+            navbar.classList.toggle('open');
+            hamburger.classList.toggle('open');
+            // Hide hamburger menu when clicked outside
+            document.addEventListener('click', function (event) {
+                if (!navbar.contains(event.target) && !hamburger.contains(event.target)) {
+                    navbar.classList.remove('open');
+                    hamburger.classList.remove('open');
+                }
+            });
+        };
+    </script>
+    <!-- Add this script before </body> -->
+    <script>
+        function toggleDropdown(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            const btn = event.currentTarget;
+            const content = btn.parentElement.nextElementSibling;
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
