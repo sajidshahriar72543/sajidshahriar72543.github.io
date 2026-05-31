@@ -17,11 +17,57 @@
                 <a href="pub.html">Research</a>
                 <a href="#" class="active">CV</a>
             </nav>
+
+            <label class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+            
+                <span class="slider">
+                    <span class="knob">
+                        <img src="/assets/svg/moon.svg" id="theme-icon" alt="">
+                    </span>
+                </span>
+            </label>
         </div>
     </header>
     <div class="pdf-container">
         <iframe src="assets/cv.pdf"></iframe>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const toggle = document.getElementById("theme-toggle");
+            const icon = document.getElementById("theme-icon");
+
+            function updateTheme(isLight) {
+
+                if (isLight) {
+                    document.body.classList.add("light-mode");
+                    icon.src = "assets/svg/sun.svg";
+                    localStorage.setItem("theme", "light");
+                } else {
+                    document.body.classList.remove("light-mode");
+                    icon.src = "assets/svg/moon.svg";
+                    localStorage.setItem("theme", "dark");
+                }
+            }
+
+            const savedTheme = localStorage.getItem("theme");
+
+            if (savedTheme === "light") {
+                toggle.checked = true;
+                updateTheme(true);
+            } else {
+                updateTheme(false);
+            }
+
+            toggle.addEventListener("change", () => {
+                updateTheme(toggle.checked);
+            });
+
+        });
+    </script>
+
 </body>
 
 </html>
