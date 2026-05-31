@@ -5,24 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sajid | Research</title>
-
   <style>
-.phd-banner {
-  background: #ffffff;
-  color: #d00000;
-  border: 2px solid #d00000;
-  padding: 12px;
-  margin-bottom: 25px;
-  text-align: center;
-  font-weight: bold;
-  animation: blink 1s infinite;
-}
+    .phd-banner {
+      background: #ffffff;
+      color: #d00000;
+      border: 2px solid #d00000;
+      padding: 12px;
+      margin-bottom: 25px;
+      text-align: center;
+      font-weight: bold;
+      animation: blink 1s infinite;
+    }
 
-@keyframes blink {
-  50% {
-    opacity: 0.3;
-  }
-}
+    @keyframes blink {
+      50% {
+        opacity: 0.3;
+      }
+    }
 
     * {
       margin: 0;
@@ -207,104 +206,83 @@
       margin-bottom: 12px;
       font-weight: 700;
     }
+
     @media (max-width: 900px) {
+      .nav-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+        padding: 12px 20px;
+      }
 
-  .nav-wrapper {
-    flex-direction: column;
-    justify-content: center;
-    gap: 12px;
-    padding: 12px 20px;
-  }
+      .navbar {
+        height: auto;
+        padding: 10px 0;
+      }
 
-  .navbar {
-    height: auto;
-    padding: 10px 0;
-  }
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+      }
 
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 18px;
-  }
+      .container {
+        flex-direction: column;
+      }
 
-  .container {
-    flex-direction: column;
-  }
+      .sidebar {
+        width: 100%;
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid #777;
+        text-align: center;
+      }
 
-  .sidebar {
-    width: 100%;
-    min-height: auto;
-    border-right: none;
-    border-bottom: 1px solid #777;
-    text-align: center;
-  }
+      .profile-img {
+        width: 150px;
+        height: 150px;
+      }
 
-  .profile-img {
-    width: 150px;
-    height: 150px;
-  }
+      .sidebar-links {
+        padding-left: 0;
+      }
 
-  .sidebar-links {
-    padding-left: 0;
-  }
+      .content {
+        padding: 30px 22px;
+      }
 
-  .content {
-    padding: 30px 22px;
-  }
+      .content h1 {
+        font-size: 2.2rem;
+      }
 
-  .content h1 {
-    font-size: 2.2rem;
-  }
+      .content h2 {
+        font-size: 1.8rem;
+      }
 
-  .content h2 {
-    font-size: 1.8rem;
-  }
-
-  .publication h3 {
-    font-size: 1.25rem;
-  }
-
-}
+      .publication h3 {
+        font-size: 1.25rem;
+      }
+    }
   </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
-
   <header class="navbar">
-
     <div class="nav-wrapper">
-
       <div class="site-title">
-        <!-- Your Name / Site Title -->
       </div>
-
       <nav>
-
         <a href="index.html">Home </a>
         <a href="#" class="active">Research</a>
-        <!-- <a href="#">Talks</a> -->
-        <!-- <a href="#">Teaching</a> -->
-        <!-- <a href="#">Portfolio</a> -->
-        <!-- <a href="#">Blog Posts</a> -->
         <a href="cv.html">CV</a>
-
       </nav>
-
     </div>
-
   </header>
-
   <div class="container">
-
     <aside class="sidebar">
-
       <img src="/assets/image.png" alt="Profile" class="profile-img">
-
       <h2>Md Shahriar Sajid</h2>
-
-
       <ul class="sidebar-links">
         <li><i class="fas fa-location-dot"></i> Dhaka, Bangladesh</li>
         <li><i class="fas fa-building-columns"></i> RUET, Bangladesh</li>
@@ -319,166 +297,96 @@
         <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/sajidshahriar72543" target="_blank"
             rel="noopener noreferrer">LinkedIn</a></li>
       </ul>
-
     </aside>
-
     <main class="content">
-
-      <!-- <h2>Publications</h2>
-
-      <p>
-        You can also find my articles on
-        <a href="https://scholar.google.com/citations?user=N9W8v_YAAAAJ&hl=en&authuser=1">HERE</a>.
-      </p> -->
-
       <div class="phd-banner">
         <span>
           Actively Looking for PhD and Master's Opportunities
         </span>
       </div>
-
       <div class="section-title">
         <h2>Conference Papers</h2>
       </div>
-
       <div class="publication">
-
         <h3>
-            Privacy preserving machine learning model personalization through federated personalized learning
+          Privacy preserving machine learning model personalization through federated personalized learning
           </a>
         </h3>
-
         <div class="publication-meta">
           Published in <i><b> 4th International Conference on Data Analytics for Business and Industry (ICDABI) </b></i>
         </div>
-
         <div class="download-links">
-          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=N9W8v_YAAAAJ&citation_for_view=N9W8v_YAAAAJ:d1gkVwhDpl0C">Link</a> | &nbsp; DOI: <a href="https://doi.org/10.1109/ICDABI60145.2023.10629638">https://doi.org/10.1109/ICDABI60145.2023.10629638</a>
+          <a
+            href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=N9W8v_YAAAAJ&citation_for_view=N9W8v_YAAAAJ:d1gkVwhDpl0C">Link</a>
+          | &nbsp; DOI: <a
+            href="https://doi.org/10.1109/ICDABI60145.2023.10629638">https://doi.org/10.1109/ICDABI60145.2023.10629638</a>
         </div>
-
         <br>
-        
         <h3>
           PaperNet: Efficient Temporal Convolutions and Channel Residual Attention for EEG Epilepsy Detection
           </a>
         </h3>
-
         <div class="publication-meta">
-          Published in <i><b> International Conference on
-          Intelligent Data Analysis and Applications (IDAA)</b></i>
-        </div>
-        
-        <div class="download-links">
-          <a
-            href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=N9W8v_YAAAAJ&citation_for_view=N9W8v_YAAAAJ:9yKSN-GCB0IC">Link</a> | &nbsp; DOI: <a
-            href="https://doi.org/10.48550/arXiv.2512.22172">https://doi.org/10.48550/arXiv.2512.22172</a>
-        </div>
-
-      </div>
-
-      <div class="section-title">
-        <h2>Work in Progress</h2>
-      </div>
-      
-      <div class="publication">
-      
-        <h3>
-          Artifact Removal in Cross-Subject EEG Locomotion Decoding: A Comparison of Classical and Deep Learning Models
-          
-        </h3>
-      
-        <!-- <div class="publication-meta">
-          Published in <i><b> 4th International Conference on Data Analytics for Business and Industry (ICDABI) </b></i>
-        </div> -->
-        <div class="publication-meta">
-          <b>Research Focus:</b> Artifact removal in cross-subject EEG locomotion decoding, comparing classical and deep learning models.
-        </div>
-      
-        <!-- <div class="download-links">
-          DOI: <a
-            href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=N9W8v_YAAAAJ&citation_for_view=N9W8v_YAAAAJ:d1gkVwhDpl0C">https://doi.org/10.1109/ICDABI60145.2023.10629638</a>
-        </div> -->
-      
-      
-        <h3>
-          Knowledge Distillation from Multimodal EEG-EMG Teacher to EEG-Only Student for Pre-Movement Intention Detection
-          
-        </h3>
-      
-        <!-- <div class="publication-meta">
           Published in <i><b> International Conference on
               Intelligent Data Analysis and Applications (IDAA)</b></i>
         </div>
-      
         <div class="download-links">
-          DOI: <a
-            href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=N9W8v_YAAAAJ&citation_for_view=N9W8v_YAAAAJ:9yKSN-GCB0IC">https://doi.org/10.48550/arXiv.2512.22172</a>
-        </div> -->
-        <div class="publication-meta">
-          <b>Research Focus:</b> Knowledge distillation from multimodal EEG-EMG teacher to EEG-only student for pre-movement intention detection, aiming to enhance the performance of EEG-based models by leveraging information from both modalities.
+          <a
+            href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=N9W8v_YAAAAJ&citation_for_view=N9W8v_YAAAAJ:9yKSN-GCB0IC">Link</a>
+          | &nbsp; DOI: <a
+            href="https://doi.org/10.48550/arXiv.2512.22172">https://doi.org/10.48550/arXiv.2512.22172</a>
         </div>
-      
       </div>
-
+      <div class="section-title">
+        <h2>Work in Progress</h2>
+      </div>
+      <div class="publication">
+        <h3>
+          Artifact Removal in Cross-Subject EEG Locomotion Decoding: A Comparison of Classical and Deep Learning Models
+        </h3>
+        <div class="publication-meta">
+          <b>Research Focus:</b> Artifact removal in cross-subject EEG locomotion decoding, comparing classical and deep
+          learning models.
+        </div>
+        <h3>
+          Knowledge Distillation from Multimodal EEG-EMG Teacher to EEG-Only Student for Pre-Movement Intention
+          Detection
+        </h3>
+        <div class="publication-meta">
+          <b>Research Focus:</b> Knowledge distillation from multimodal EEG-EMG teacher to EEG-only student for
+          pre-movement intention detection, aiming to enhance the performance of EEG-based models by leveraging
+          information from both modalities.
+        </div>
+      </div>
       <div class="section-title">
         <h2>Supervised Theses</h2>
       </div>
-
       <div class="publication">
-      
         <h3>
           Time Traffic Sign Detection Using CNN: A Bangladesh-Oriented Approach
-      
         </h3>
-      
-        <!-- <div class="publication-meta">
-                Published in <i><b> 4th International Conference on Data Analytics for Business and Industry (ICDABI) </b></i>
-              </div> -->
         <div class="publication-meta">
-          <b>Research Focus:</b> Time traffic sign detection using CNN, with a focus on developing a Bangladesh-oriented approach to enhance traffic safety and navigation.
-
+          <b>Research Focus:</b> Time traffic sign detection using CNN, with a focus on developing a Bangladesh-oriented
+          approach to enhance traffic safety and navigation.
           <br><b>Students:</b> Sheikh Mehedi Hasan, Sumaiya Binte Hossain, Jannat-E-Nur, Sohada Akter Riya
           <br><b>Supervisor:</b> Md Shahriar Sajid
         </div>
-      
-        <!-- <div class="download-links">
-                DOI: <a
-                  href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=N9W8v_YAAAAJ&citation_for_view=N9W8v_YAAAAJ:d1gkVwhDpl0C">https://doi.org/10.1109/ICDABI60145.2023.10629638</a>
-              </div> -->
-      
-      
         <h3>
           Impacts of COVID-19 Vaccines among Bangladeshi
           Adults: Facts, Insights, and Findings
-      
         </h3>
-      
-        <!-- <div class="publication-meta">
-                Published in <i><b> International Conference on
-                    Intelligent Data Analysis and Applications (IDAA)</b></i>
-              </div>
-            
-              <div class="download-links">
-                DOI: <a
-                  href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=N9W8v_YAAAAJ&citation_for_view=N9W8v_YAAAAJ:9yKSN-GCB0IC">https://doi.org/10.48550/arXiv.2512.22172</a>
-              </div> -->
         <div class="publication-meta">
-          <b>Research Focus:</b> Impacts of COVID-19 vaccines among Bangladeshi adults, providing facts, insights, and findings to inform public health strategies and vaccine deployment in Bangladesh.
+          <b>Research Focus:</b> Impacts of COVID-19 vaccines among Bangladeshi adults, providing facts, insights, and
+          findings to inform public health strategies and vaccine deployment in Bangladesh.
           <br><b>Students:</b> Abdullah Al Azme, Neyamot Ullah
           <br><b>Supervisor:</b> Md Shahriar Sajid
         </div>
-      
       </div>
-
       <footer>
-        </div>
-
-      </footer>
-
-    </main>
-
   </div>
-
+  </footer>
+  </main>
+  </div>
 </body>
 
 </html>
