@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Md Shahriar Sajid — Academic Portfolio</title>
+  <meta name="description"
+    content="Md Shahriar Sajid — Lecturer in Computer Science & Engineering. Research in machine learning, EEG brain–computer interfaces, and privacy-preserving AI." />
+
+  <!-- Browser tab icon -->
+  <!-- <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231a4ed8'/%3E%3Ctext x='50' y='71' font-family='Georgia,serif' font-size='58' font-weight='600' fill='%23ffffff' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#1a4ed8" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)" /> -->
+
+  <!-- Marks that JS is available, so reveal animations only arm themselves
+     when there is something to disarm them. Without JS, everything is
+     simply visible. -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Scroll progress -->
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <div class="layout">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar" id="sidebar">
+
+      <div class="sidebar__head">
+        <a class="sidebar__brand" href="#top">
+          <!-- <span class="brand-mark" aria-hidden="true">M</span> -->
+          <span class="brand-name">Md Shahriar Sajid</span>
+        </a>
+        <button class="collapse-btn" id="collapse-btn" type="button" aria-controls="sidebar" aria-expanded="true"
+          aria-label="Collapse sidebar" title="Collapse sidebar">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15 5.5 8.5 12 15 18.5" />
+          </svg>
+        </button>
+      </div>
+
+      <nav class="side-nav" id="side-nav">
+
+        <a href="#about" title="About">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="8" r="3.4" />
+            <path d="M4.8 20a7.2 7.2 0 0 1 14.4 0" />
+          </svg>
+          <span class="lbl">About</span>
+        </a>
+
+        <a href="#research" title="Research">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M9.2 17.5h5.6" />
+            <path d="M10.2 20.5h3.6" />
+            <path
+              d="M12 3.2a6.2 6.2 0 0 0-3.4 11.4c.4.3.6.7.6 1.2v1.7h5.6v-1.7c0-.5.2-.9.6-1.2A6.2 6.2 0 0 0 12 3.2z" />
+          </svg>
+          <span class="lbl">Research</span>
+        </a>
+
+        <a href="#education" title="Education">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M2.5 8.8 12 4l9.5 4.8L12 13.6z" />
+            <path d="M6.5 11.2v5.3c0 1.6 2.5 2.9 5.5 2.9s5.5-1.3 5.5-2.9v-5.3" />
+          </svg>
+          <span class="lbl">Education</span>
+        </a>
+
+        <a href="#publications" title="Publications">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+          </svg>
+          <span class="lbl">Publications</span>
+        </a>
+
+        <a href="#projects" title="Projects">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="7.5" height="7.5" rx="1.6" />
+            <rect x="13.5" y="3" width="7.5" height="7.5" rx="1.6" />
+            <rect x="3" y="13.5" width="7.5" height="7.5" rx="1.6" />
+            <rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.6" />
+          </svg>
+          <span class="lbl">Projects</span>
+        </a>
+
+        <a href="#experience" title="Experience">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="7.5" width="18" height="12.5" rx="2" />
+            <path d="M8.5 7.5V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v1.5" />
+            <path d="M3 12.5h18" />
+          </svg>
+          <span class="lbl">Experience</span>
+        </a>
+
+        <a href="#skills" title="Skills">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 8h16M4 16h16" />
+            <circle cx="9" cy="8" r="2.4" />
+            <circle cx="15" cy="16" r="2.4" />
+          </svg>
+          <span class="lbl">Skills</span>
+        </a>
+
+        <a href="#contact" title="Contact">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="5.5" width="18" height="13" rx="2" />
+            <path d="M3.8 7.2 12 13l8.2-5.8" />
+          </svg>
+          <span class="lbl">Contact</span>
+        </a>
+
+      </nav>
+
+      <div class="sidebar__foot">
+        <a href="mailto:sajidshahriar72543@gmail.com" title="Email">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="5.5" width="18" height="13" rx="2" />
+            <path d="M3.8 7.2 12 13l8.2-5.8" />
+          </svg>
+          <span class="lbl">Email</span>
+        </a>
+        <span class="foot-note">Dhaka, Bangladesh</span>
+      </div>
+
+    </aside>
+
+    <!-- ================= CONTENT ================= -->
+    <main class="main">
+
+      <!-- ---------- HERO ---------- -->
+      <section class="hero" id="top">
+        <div class="main__wrap">
+      
+          <div class="hero__grid">
+      
+            <div>
+              <h1>Md Shahriar Sajid</h1>
+              <p class="hero__role">Lecturer, Department of Computer Science &amp; Engineering</p>
+              <p class="hero__org">European University of Bangladesh · Research Assistant, Transparent
+                Intelligence Lab (RUET)</p>
+      
+              <p class="hero__lede">Decoding neural signals</p>
+      
+              <div class="cta">
+                <a class="btn btn--scholar"
+                  href="https://scholar.google.com/citations?hl=en&amp;user=N9W8_v_YAAAAJ&amp;view_op=list_works&amp;sortby=pubdate"
+                  target="_blank" rel="noopener">
+                  <svg class="btn-ico" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 3.2 2 9.2l10 6 10-6z" />
+                    <path
+                      d="M6.2 12.6v3.9c0 .45.27.87.72 1.13 1.32.77 3.1 1.22 5.08 1.22s3.76-.45 5.08-1.22c.45-.26.72-.68.72-1.13v-3.9l-5.8 3.5z" />
+                  </svg>
+                  Google Scholar
+                </a>
+      
+                <a class="icon-link" href="https://github.com/sajidshahriar72543" target="_blank" rel="noopener"
+                  aria-label="GitHub" title="GitHub">
+                  <svg viewBox="0 0 16 16" aria-hidden="true">
+                    <path
+                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                  </svg>
+                </a>
+      
+                <a class="icon-link" href="https://www.linkedin.com/in/sajidshahriar72543" target="_blank" rel="noopener"
+                  aria-label="LinkedIn" title="LinkedIn">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+      
+            <dl class="facts">
+              <div class="facts__row">
+                <dt>Based</dt>
+                <dd>Dhaka, Bangladesh</dd>
+              </div>
+              <div class="facts__row">
+                <dt>Degree</dt>
+                <dd><b>B.Sc. Electrical &amp; Computer Engineering</b>, RUET</dd>
+              </div>
+              <div class="facts__row">
+                <dt>English</dt>
+                <dd>IELTS 7.5 · CEFR C1</dd>
+              </div>
+              <div class="facts__row">
+                <dt>Focus</dt>
+                <dd>EEG · BCI · Privacy-Preserving ML · Computer Vision</dd>
+              </div>
+              <div class="facts__row">
+                <dt>Email</dt>
+                <dd><a href="mailto:sajidshahriar72543@gmail.com">sajidshahriar72543@gmail.com</a></dd>
+              </div>
+            </dl>
+      
+          </div>
+      
+          <!-- Full-width, below both columns -->
+          <p class="status">
+            <span class="status__dot" aria-hidden="true"></span>
+            Actively looking for PhD and Master's opportunities
+          </p>
+      
+        </div>
+      </section>
+
+      <!-- ---------- ABOUT ---------- -->
+      <section class="section" id="about">
+        <div class="main__wrap">
+          <div class="section__head">
+            <p class="section__num">01</p>
+            <h2>About</h2>
+          </div>
+
+          <div class="prose">
+            <p>
+              I am a Lecturer in Computer Science and Engineering at the
+              <strong>European University of Bangladesh</strong>. I also work as a Research Assistant at
+              the <strong>Transparent Intelligence Lab</strong> at RUET, with Dr. Md Nahiduzzaman, and at
+              the <strong>ELITE Research Lab</strong>, with Md Kishor Morol. I hold a B.Sc. in Electrical
+              &amp; Computer Engineering from Rajshahi University of Engineering &amp; Technology.
+            </p>
+            <p>
+              My work sits at the intersection of machine learning and biomedical signal processing.
+              I design lightweight, interpretable architectures for EEG analysis particularly
+              brain-computer interfaces, and study how well they generalize to unseen subjects.
+              I have also worked on privacy-preserving federated learning for decentralized
+              healthcare and on computer vision for remote sensing. A recurring result across these
+              projects is that simpler methods often generalize better when data is scarce: my
+              current work on cross-subject EEG locomotion decoding shows classical spatial filtering
+              outperforming deep models under artifact-aware, subject-wise evaluation. Long term,
+              I want to contribute to clinical AI systems reliable enough to be used outside
+              controlled experimental settings.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- RESEARCH ---------- -->
+      <section class="section section--soft" id="research">
+        <div class="main__wrap">
+          <div class="section__head">
+            <p class="section__num">02</p>
+            <h2>Research Interests</h2>
+          </div>
+
+          <ul class="interests">
+            <li>Machine learning &amp; deep learning</li>
+            <li>Biomedical signal processing</li>
+            <li>Brain–computer interfaces</li>
+            <li>Cross-subject generalization</li>
+            <li>Privacy-preserving &amp; federated learning</li>
+            <li>Computer vision &amp; remote sensing</li>
+            <li>Interpretability &amp; trustworthy AI</li>
+            <li>Time-series analysis</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ---------- EDUCATION ---------- -->
+      <section class="section" id="education">
+        <div class="main__wrap">
+          <div class="section__head">
+            <p class="section__num">03</p>
+            <h2>Education</h2>
+          </div>
+
+          <div class="cols-2 cols-2--tight">
+
+            <article class="entry">
+              <div class="entry__head">
+                <h3>B.Sc. Electrical &amp; Computer Engineering</h3>
+                <span class="entry__date">2019 – 2024</span>
+              </div>
+              <p class="entry__org">Rajshahi University of Engineering &amp; Technology</p>
+              <div class="entry__body">
+                <p>
+                  <strong>Thesis:</strong> Ensemble of Convolutional Neural Networks for Stroke
+                  Prediction
+                </p>
+              </div>
+            </article>
+
+            <article class="entry">
+              <div class="entry__head">
+                <h3>IELTS Academic — Overall 7.5</h3>
+                <span class="entry__date">Aug 2025</span>
+              </div>
+              <p class="entry__org">British Council / IDP / Cambridge · CEFR C1</p>
+              <div class="entry__body">
+                <ul class="scores">
+                  <li>Listening <b>8.0</b></li>
+                  <li>Reading <b>7.5</b></li>
+                  <li>Writing <b>7.0</b></li>
+                  <li>Speaking <b>7.0</b></li>
+                </ul>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- PUBLICATIONS ---------- -->
+      <section class="section section--soft" id="publications">
+        <div class="main__wrap">
+          <div class="section__head">
+            <p class="section__num">04</p>
+            <h2>Publications</h2>
+            <p class="section__note">2 peer-reviewed · 2 in preparation</p>
+          </div>
+
+          <div class="pubs">
+
+            <article class="pub">
+              <div class="pub__meta">
+                <span class="pub__year">2025</span>
+                <span class="pub__kind">First Author</span>
+              </div>
+              <p class="pub__title">
+                PaperNet: Efficient Temporal Convolutions and Channel Residual Attention for EEG
+                Epilepsy Detection
+              </p>
+              <p class="pub__authors"><strong>Md Shahriar Sajid</strong>, Abhijit Kumar Ghosh, Fariha Nusrat</p>
+              <b><p class="pub__venue">Intl. Conf. on Intelligent Data Analysis and Applications (IDAA)</p></b>
+              <a class="pub__link" href="https://doi.org/10.2991/978-94-6239-664-7_79" target="_blank"
+                rel="noopener">DOI ↗</a>
+            </article>
+
+            <article class="pub">
+              <div class="pub__meta">
+                <span class="pub__year">2023</span>
+                <span class="pub__kind">Conference</span>
+              </div>
+              <p class="pub__title">
+                Privacy Preserving Machine Learning Model Personalization through Federated
+                Personalized Learning
+              </p>
+              <p class="pub__authors">
+                Md. Tanzib Hosain, Asif Zaman, <strong>Md. Shahriar Sajid</strong>,
+                Shadman Sakeeb Khan, Shanjida Akter
+              </p>
+              <b><p class="pub__venue">Intl. Conf. on Data Analytics for Business and Industry (ICDABI), Bahrain</p></b>
+              <a class="pub__link" href="https://doi.org/10.1109/ICDABI60145.2023.10629638" target="_blank"
+                rel="noopener">DOI ↗</a>
+            </article>
+
+            <article class="pub pub--wip">
+              <div class="pub__meta">
+                <span class="pub__year">WIP</span>
+                <span class="pub__kind">Working Paper</span>
+              </div>
+              <p class="pub__title">
+                Artifact Removal in Cross-Subject EEG Locomotion Decoding: A Comparison of Classical
+                and Deep Learning Models
+              </p>
+            </article>
+
+            <article class="pub pub--wip">
+              <div class="pub__meta">
+                <span class="pub__year">WIP</span>
+                <span class="pub__kind">Working Paper</span>
+              </div>
+              <p class="pub__title">
+                Benchmarking Deep Learning and Vision Transformers for Multi-Platform Land Cover
+                Scene Classification in Bangladesh
+              </p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- PROJECTS ---------- -->
+      <section class="section" id="projects">
+        <div class="main__wrap">
+          <div class="section__head">
+            <p class="section__num">05</p>
+            <h2>Selected Research Projects</h2>
+          </div>
+
+          <div class="cards">
+
+            <article class="card">
+              <p class="card__tag">EEG · 2025</p>
+              <p class="card__title">PaperNet — Lightweight EEG Epilepsy Detection</p>
+              <p class="card__text">
+                Temporal convolutions, channel-wise residual attention, and a bidirectional LSTM for
+                short-window EEG classification.
+              </p>
+              <ul class="metrics">
+                <li><span>Params</span><b>~0.6 M</b></li>
+                <li><span>Macro-F1</span><b>0.958</b></li>
+                <li><span>ROC-AUC</span><b>0.997</b></li>
+                <li><span>Accuracy</span><b>0.958</b></li>
+              </ul>
+              <p class="card__foot">BEED dataset · TensorFlow / Keras</p>
+            </article>
+
+            <article class="card">
+              <p class="card__tag">EEG · Ongoing</p>
+              <p class="card__title">Cross-Subject EEG Locomotion Decoding</p>
+              <p class="card__text">
+                Classical vs. deep pipelines for binary rest/walk decoding under EEG+EOG and EEG-only
+                settings, with subject-wise GroupKFold.
+              </p>
+              <ul class="metrics">
+                <li><span>Mean Acc.</span><b>79.3%</b></li>
+                <li><span>Macro-F1</span><b>0.792</b></li>
+                <li><span>Std. Acc.</span><b>4.6%</b></li>
+                <li><span>Best</span><b>CSP + SVC</b></li>
+              </ul>
+              <p class="card__foot">OpenNeuro ds007526 · CSP, RF, XGBoost, EEGNet</p>
+            </article>
+
+            <article class="card">
+              <p class="card__tag">FL · 2023</p>
+              <p class="card__title">Privacy-Preserving Federated Personalization</p>
+              <p class="card__text">
+                Benchmarking federated personalization against differential privacy, homomorphic
+                encryption, secure aggregation, and SMPC.
+              </p>
+              <ul class="metrics">
+                <li><span>Best</span><b>APPLE+HE</b></li>
+                <li><span>Accuracy</span><b>99.34%</b></li>
+                <li><span>F1-Score</span><b>99.34%</b></li>
+                <li><span>Clients</span><b>200</b></li>
+              </ul>
+              <p class="card__foot">VirusMNIST · Published at ICDABI 2023</p>
+            </article>
+
+            <article class="card">
+              <p class="card__tag">Clinical AI · Thesis</p>
+              <p class="card__title">Ensemble CNNs for Stroke Prediction</p>
+              <p class="card__text">
+                An ensemble of convolutional neural networks developed to improve diagnostic accuracy
+                in stroke prediction.
+              </p>
+              <ul class="metrics">
+                <li><span>Domain</span><b>Clinical AI</b></li>
+                <li><span>Approach</span><b>CNN Ensemble</b></li>
+              </ul>
+              <p class="card__foot">RUET · Dept. of Electrical &amp; Computer Engineering</p>
+            </article>
+
+            <article class="card">
+              <p class="card__tag">Vision · Ongoing</p>
+              <p class="card__title">Land Cover Classification in Bangladesh</p>
+              <p class="card__text">
+                A benchmark of CNNs and Vision Transformers on the MLC-BD dataset for multi-platform
+                land cover scene classification.
+              </p>
+              <ul class="metrics">
+                <li><span>Models</span><b>CNN · ViT</b></li>
+                <li><span>Domain</span><b>Remote Sensing</b></li>
+              </ul>
+              <p class="card__foot">Working paper · Geospatial computer vision</p>
+            </article>
+
+            <article class="card">
+              <p class="card__tag">Open Source · 2024</p>
+              <p class="card__title">aosPB — AOSP-Based Android Firmware</p>
+              <p class="card__text">
+                Founder and lead developer of a Vanilla AOSP-based custom Android firmware built for
+                multiple hardware platforms.
+              </p>
+              <ul class="metrics">
+                <li><span>Since</span><b>Oct 2024</b></li>
+                <li><span>Stack</span><b>C · Bash · YML</b></li>
+              </ul>
+              <p class="card__foot">Open source · CI/CD via GitHub Actions</p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- EXPERIENCE + TEACHING ---------- -->
+      <section class="section section--soft" id="experience">
+        <div class="main__wrap">
+          <div class="section__head">
+            <p class="section__num">06</p>
+            <h2>Experience</h2>
+          </div>
+
+          <div class="cols-2">
+
+            <div>
+              <article class="entry">
+                <div class="entry__head">
+                  <h3>Research Assistant — ELITE Research Lab</h3>
+                  <span class="entry__date">2026 – Present</span>
+                </div>
+                <p class="entry__org">PI: Md Kishor Morol, CEO, ELITE Research Lab, NY, USA</p>
+                <div class="entry__body">
+                  <p>Applied machine learning research with an international team.</p>
+                </div>
+              </article>
+
+              <article class="entry">
+                <div class="entry__head">
+                  <h3>Research Assistant — Transparent Intelligence Lab</h3>
+                  <span class="entry__date">2025 – Present</span>
+                </div>
+                <p class="entry__org">PI: Md Nahiduzzaman, Asst. Prof., Dept. of ECE, RUET</p>
+                <div class="entry__body">
+                  <p>EEG brain–computer interfaces, cross-subject generalization, interpretable biomedical ML.</p>
+                </div>
+              </article>
+
+              <article class="entry">
+                <div class="entry__head">
+                  <h3>Lecturer — Dept. of Computer Science &amp; Engineering</h3>
+                  <span class="entry__date">2025 – Present</span>
+                </div>
+                <p class="entry__org">European University of Bangladesh, Dhaka</p>
+                <div class="entry__body">
+                  <p>Teaching programming and applied ML; supervising undergraduate theses.</p>
+                </div>
+              </article>
+            </div>
+
+            <div>
+              <div class="entry">
+                <div class="entry__head">
+                  <h3>Teaching &amp; Service</h3>
+                </div>
+                <div class="entry__body">
+                  <div class="rows">
+                    <div class="row">
+                      <span class="row__label">Courses</span>
+                      <span class="row__value">Computer Programming · Applied Machine Learning</span>
+                    </div>
+                    <div class="row">
+                      <span class="row__label">Supervision</span>
+                      <span class="row__value">
+                        <div><strong>Real-Time Traffic Sign Detection Using CNN</strong><br />
+                          <em>Hasan, Hossain, Jannat-E-Nur, Riya</em>
+                        </div>
+                        <div><strong>Impacts of COVID-19 Vaccines among Bangladeshi Adults</strong><br />
+                          <em>Azme, Ullah</em>
+                        </div>
+                      </span>
+                    </div>
+                    <div class="row">
+                      <span class="row__label">Mentoring</span>
+                      <span class="row__value">
+                        Chief Mentor, Programming Club, European University of Bangladesh — 50+ students.
+                      </span>
+                    </div>
+                    <div class="row">
+                      <span class="row__label">Open source</span>
+                      <span class="row__value">
+                        Founder &amp; Lead Developer of <strong>aosPB</strong>, an AOSP-based custom
+                        Android firmware.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- SKILLS + AWARDS ---------- -->
+      <section class="section" id="skills">
+        <div class="main__wrap">
+          <div class="section__head">
+            <p class="section__num">07</p>
+            <h2>Skills &amp; Awards</h2>
+          </div>
+
+          <div class="cols-2">
+
+            <div class="entry">
+              <div class="entry__head">
+                <h3>Technical Skills</h3>
+              </div>
+              <div class="entry__body">
+                <div class="rows">
+                  <div class="row">
+                    <span class="row__label">Languages</span>
+                    <span class="row__value">Python · C · C++ · Dart · Bash · MySQL</span>
+                  </div>
+                  <div class="row">
+                    <span class="row__label">ML / DL</span>
+                    <span class="row__value">PyTorch · TensorFlow · Keras · Scikit-learn · OpenCV</span>
+                  </div>
+                  <div class="row">
+                    <span class="row__label">Tools</span>
+                    <span class="row__value">Git · GitHub Actions · CircleCI · Drone CI · Linux · LaTeX · AOSP</span>
+                  </div>
+                  <div class="row">
+                    <span class="row__label">Other</span>
+                    <span class="row__value">Technical writing · Reproducible research · Project management</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="entry">
+              <div class="entry__head">
+                <h3>Awards &amp; Recognition</h3>
+              </div>
+              <div class="entry__body">
+                <div class="rows">
+                  <div class="row">
+                    <span class="row__label">Stipend</span>
+                    <span class="row__value">
+                      <strong>Merit-Based University Stipend</strong> — received annually throughout
+                      the undergraduate program at RUET.
+                    </span>
+                  </div>
+                  <div class="row">
+                    <span class="row__label">2023</span>
+                    <span class="row__value">
+                      <strong>International University Physics Competition</strong> — accomplished
+                      competitor.
+                    </span>
+                  </div>
+                  <div class="row">
+                    <span class="row__label">2021–25</span>
+                    <span class="row__value">
+                      <strong>Hacktoberfest</strong> — open source contributor
+                      <a class="gh" href="https://github.com/sajidshahriar72543" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 16 16" aria-hidden="true">
+                          <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                        </svg>
+                        <span>sajidshahriar72543</span>
+                      </a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- CONTACT ---------- -->
+      <section class="section section--soft" id="contact">
+        <div class="main__wrap">
+          <div class="section__head">
+            <p class="section__num">08</p>
+            <h2>Contact</h2>
+          </div>
+
+          <div class="contact__grid">
+            <div>
+              <p class="contact__lede">
+                I am open to research collaborations, graduate study opportunities, and conversations
+                about EEG decoding, biomedical machine learning, and privacy-preserving AI.
+              </p>
+              <div class="contact__links">
+                <a class="btn btn--solid" href="mailto:sajidshahriar72543@gmail.com">Email me</a>
+                <a class="btn" href="https://github.com/sajidshahriar72543" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+
+            <dl class="facts contact__aside">
+              <div class="facts__row">
+                <dt>Email</dt>
+                <dd><a href="mailto:sajidshahriar72543@gmail.com">sajidshahriar72543@gmail.com</a></dd>
+              </div>
+              <div class="facts__row">
+                <dt>GitHub</dt>
+                <dd><a href="https://github.com/sajidshahriar72543" target="_blank"
+                    rel="noopener">@sajidshahriar72543</a></dd>
+              </div>
+              <div class="facts__row">
+                <dt>Location</dt>
+                <dd>Dhaka, Bangladesh</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- FOOTER ---------- -->
+      <footer class="site-foot">
+        <div class="main__wrap">
+          <p>© Md Shahriar Sajid · Dhaka, Bangladesh</p>
+        </div>
+      </footer>
+
+    </main>
+
+    <!-- ================= RIGHT RAIL ================= -->
+    <aside class="rail" aria-label="Local time and calendar">
+
+      <div class="rail__block">
+        <p class="rail__label">Your Local Time</p>
+        <p class="clock" id="clock">--:--:--</p>
+        <p class="clock__date" id="clock-date">Loading…</p>
+        <p class="clock__zone" id="clock-zone"></p>
+      </div>
+
+      <div class="rail__block">
+        <p class="rail__label" id="cal-month">Calendar</p>
+        <div class="cal" id="cal" aria-hidden="true"></div>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
