@@ -262,6 +262,28 @@
         items[i].link.removeAttribute('aria-current');
       }
     }
+
+        /* On mobile the nav is a horizontal scroller, so bring the
+       active link into view. Adjusting nav.scrollLeft directly
+       keeps the page scroll untouched — scrollIntoView would
+       also drag the page, since the sidebar is sticky. */
+    if (item && nav && window.innerWidth <= 900) {
+      var linkRect = item.link.getBoundingClientRect();
+      var navRect = nav.getBoundingClientRect();
+
+      /* How far the link's centre sits from the nav's centre */
+      var delta = (linkRect.left + linkRect.width / 2) -
+        (navRect.left + navRect.width / 2);
+
+      /* Only nudge when it's meaningfully off-centre, so the nav
+         doesn't creep on every section change */
+      if (Math.abs(delta) > 40) {
+        nav.scrollTo({
+          left: nav.scrollLeft + delta,
+          behavior: reduceMotion ? 'auto' : 'smooth'
+        });
+      }
+    }
   }
 
   function updateSpy() {
